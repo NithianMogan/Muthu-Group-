@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Contact Muthu Groups — reach us for product enquiries, orders, or general information. We're based in Tamil Nadu, India." />
+  <title>Contact Us | Muthu Groups</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <style>
+    .company-addr-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--card-shadow);
+      padding: 28px 24px;
+      border-top: 4px solid var(--amber);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+
+    .company-addr-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--card-shadow-hover);
+    }
+
+    .company-addr-card h4 {
+      color: var(--navy);
+      font-size: 1rem;
+      margin-bottom: 14px;
+    }
+
+    .company-addr-card p {
+      font-size: 0.88rem;
+      color: #666;
+      margin-bottom: 8px;
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    .company-addr-card p .ic {
+      color: var(--amber);
+      flex-shrink: 0;
+    }
+
+    .contact-section-note {
+      text-align: center;
+      font-size: 0.88rem;
+      color: #888;
+      margin-top: 24px;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="{{ url_for('home') }}" class="navbar__logo">Muthu Groups<span></span></a>
+      <ul class="navbar__links">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About Us</a></li>
+        <li><a href="{{ url_for('products') }}">Products</a></li>
+        <li><a href="{{ url_for('companies') }}">Group Companies</a></li>
+        <li><a href="{{ url_for('contact') }}" class="active">Contact Us</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('about') }}">About Us</a>
+    <a href="{{ url_for('products') }}">Products</a>
+    <a href="{{ url_for('companies') }}">Group Companies</a>
+    <a href="{{ url_for('contact') }}" class="active">Contact Us</a>
+  </div>
+
+  <!-- PAGE BANNER -->
+  <div class="page-banner">
+    <div class="container">
+      <h1>Get In Touch</h1>
+      <p style="color: rgba(255,255,255,0.75); margin-top: 10px; font-size: 1.05rem; position: relative;">We'd love to
+        hear from you. Reach out for product enquiries, orders, or general information.</p>
+      <p class="breadcrumb" style="margin-top: 14px;"><a href="{{ url_for('home') }}">Home</a><span>&rsaquo;</span>Contact Us</p>
+    </div>
+  </div>
+
+  <!-- MAIN CONTACT LAYOUT -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="grid-2 fade-in" style="gap: 48px; align-items: start;">
+
+        <!-- LEFT: Contact Details -->
+        <div class="contact-details">
+          <p
+            style="color: var(--amber); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;">
+            Head Office</p>
+          <h2 class="section-title" style="margin-bottom: 28px;">Muthu Groups</h2>
+
+          <div class="contact-detail-item">
+            <div class="icon-circle">📍</div>
+            <div class="info">
+              <strong>Address</strong>
+              <p>No:71/1, poraiyoor, Villianur commune,Puducherry - 605110, India</p>
+            </div>
+          </div>
+
+          <div class="contact-detail-item">
+            <div class="icon-circle">📞</div>
+            <div class="info">
+              <strong>Phone</strong>
+              <p>+91 6380633625</p>
+            </div>
+          </div>
+
+          <div class="contact-detail-item">
+            <div class="icon-circle">📞</div>
+            <div class="info">
+              <strong>Alternate Phone</strong>
+              <p>+91 7598580361</p>
+            </div>
+          </div>
+
+          <div class="contact-detail-item">
+            <div class="icon-circle">📧</div>
+            <div class="info">
+              <strong>Email</strong>
+              <p>info@muthugroups.com</p>
+            </div>
+          </div>
+
+          <div class="contact-detail-item">
+            <div class="icon-circle">🕘</div>
+            <div class="info">
+              <strong>Working Hours</strong>
+              <p>Monday – Saturday<br />9:00 AM – 6:00 PM</p>
+            </div>
+          </div>
+          <div class="map-placeholder">
+            <iframe src="https://www.google.com/maps?q=11.929198861369045, 79.74839162079546&z=15&output=embed"
+              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- RIGHT: Contact Form -->
+        <div class="contact-form fade-in">
+          <p
+            style="color: var(--amber); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;">
+            Send a Message</p>
+          <h3 style="color: var(--navy); margin-bottom: 24px;">We'll get back to you soon</h3>
+
+          <form id="contact-form" action="{{ url_for('contact') }}" method="POST">
+            <input type="hidden" name="subject" id="email-subject" value="Muthu Groups Contact Enquiry" />
+            
+            <div class="form-group">
+              <label for="full-name">Full Name</label>
+              <input type="text" id="full-name" name="name" placeholder="Your full name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="company">Company / Organisation</label>
+              <input type="text" id="company" name="company" placeholder="Your company name" />
+            </div>
+
+            <div class="form-group">
+              <label for="subject-select">Subject</label>
+              <select id="subject-select" name="enquiry_type">
+                <option value="" disabled selected>Select a subject…</option>
+                <option value="general">General Enquiry</option>
+                <option value="product">Product Enquiry</option>
+                <option value="partnership">Partnership</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help you…"
+                required></textarea>
+            </div>
+
+            <button type="submit" id="submit-btn" class="btn btn--amber" style="width: 100%; font-size: 1rem;">
+              Send Message ✉️
+            </button>
+
+            <!-- Status Message -->
+            <div id="form-status" class="form-status"></div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THREE COMPANY ADDRESS CARDS -->
+  <section class="section section--grey">
+    <div class="container">
+      <div class="text-center fade-in" style="margin-bottom: 0;">
+        <p
+          style="color: var(--amber); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;">
+          Our Companies</p>
+        <h2 class="section-title">Find Our Companies</h2>
+        <p class="section-subtitle">All three companies operate from a shared facility.</p>
+      </div>
+
+      <div class="grid-3 fade-in">
+
+        <div class="company-addr-card">
+          <div style="font-size: 1.8rem; margin-bottom: 12px;">🎞️</div>
+          <h4>Muthu Food Films</h4>
+          <p><span class="ic">📍</span>No:71/1, poraiyoor, Villianur commune,Puducherry - 605110, India</p>
+          <p><span class="ic">📞</span>6380633625, 7598580361</p>
+          <p><span class="ic">📧</span>info@muthugroups.com</p>
+        </div>
+
+        <div class="company-addr-card">
+          <div style="font-size: 1.8rem; margin-bottom: 12px;">📦</div>
+          <h4>Muthu Shri Chakra Packaging Pvt. Ltd.</h4>
+          <p><span class="ic">📍</span>No:71/1, poraiyoor, Villianur commune,Puducherry - 605110, India</p>
+          <p><span class="ic">📞</span>6380633625, 7598580361</p>
+          <p><span class="ic">📧</span>info@muthugroups.com</p>
+        </div>
+
+        <div class="company-addr-card">
+          <div style="font-size: 1.8rem; margin-bottom: 12px;">🔧</div>
+          <h4>Muthu Multi Formation</h4>
+          <p><span class="ic">📍</span>No:71/1, poraiyoor, Villianur commune,Puducherry - 605110, India</p>
+          <p><span class="ic">📞</span>6380633625, 7598580361</p>
+          <p><span class="ic">📧</span>info@muthugroups.com</p>
+        </div>
+
+      </div>
+
+      <p class="contact-section-note">All companies share a common facility address. Address details are placeholders —
+        to be updated.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">Muthu Groups</div>
+          <p class="footer__tagline">Manufacturing quality.<br />Delivering trust.</p>
+        </div>
+        <div>
+          <p class="footer__heading">Quick Links</p>
+          <div class="footer__links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About Us</a>
+            <a href="{{ url_for('products') }}">Products</a>
+            <a href="{{ url_for('companies') }}">Group Companies</a>
+            <a href="{{ url_for('contact') }}">Contact Us</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__heading">Contact</p>
+          <div class="footer__contact">
+            <p><span class="icon">📍</span>No:71/1, poraiyoor, Villianur commune,Puducherry - 605110, India</p>
+            <p><span class="icon">📞</span>6380633625, 7598580361</p>
+            <p><span class="icon">📧</span>info@muthugroups.com</p>
+            <p><span class="icon">🕘</span>Mon – Sat, 9:00 AM – 6:00 PM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">&copy; 2026 Muthu Groups. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+
+</html>

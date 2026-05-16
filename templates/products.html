@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Explore the full product range of Muthu Groups — polyethylene films, laminated packaging, printed poly films, PVC tubes, and hoses." />
+  <title>Products | Muthu Groups</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="{{ url_for('home') }}" class="navbar__logo">Muthu Groups<span></span></a>
+      <ul class="navbar__links">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About Us</a></li>
+        <li><a href="{{ url_for('products') }}" class="active">Products</a></li>
+        <li><a href="{{ url_for('companies') }}">Group Companies</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('about') }}">About Us</a>
+    <a href="{{ url_for('products') }}" class="active">Products</a>
+    <a href="{{ url_for('companies') }}">Group Companies</a>
+    <a href="{{ url_for('contact') }}">Contact Us</a>
+  </div>
+
+  <!-- PAGE BANNER -->
+  <div class="page-banner">
+    <div class="container">
+      <h1>Our Products</h1>
+      <p class="breadcrumb" style="margin-top: 14px;"><a href="{{ url_for('home') }}">Home</a><span>&rsaquo;</span>Products</p>
+    </div>
+  </div>
+
+  <!-- PRODUCTS TABS -->
+  <section class="section section--white">
+    <div class="container">
+
+      <!-- Tab Navigation -->
+      <div class="tabs-nav" role="tablist">
+        <button class="tab-btn active" data-tab="tab-mff" role="tab" aria-selected="true">
+          🎞️ Muthu Food Films
+        </button>
+        <button class="tab-btn" data-tab="tab-mscp" role="tab" aria-selected="false">
+          📦 Muthu Shri Chakra Packaging
+        </button>
+        <button class="tab-btn" data-tab="tab-mmf" role="tab" aria-selected="false">
+          🔧 Muthu Multi Formation
+        </button>
+      </div>
+
+      <!-- ==========================================
+           TAB 1: Muthu Food Films
+           ========================================== -->
+      <div class="tab-panel active" id="tab-mff" role="tabpanel">
+        <div class="fade-in" style="margin-bottom: 36px;">
+          <h2 style="margin-bottom: 12px;">Muthu Food Films — Product Range</h2>
+          <p style="max-width: 800px; color: #555;">Muthu Food Films specializes in the manufacture of high-quality
+            polyethylene films designed for the food and dairy sector. Our films are engineered to ensure food safety,
+            product freshness, and reliable performance across a variety of packaging applications.</p>
+        </div>
+
+        <div class="grid-2 fade-in" style="grid-template-columns: 1fr 1fr; align-items: start; gap: 28px;">
+
+          <!-- Product 1.1 -->
+          <div class="product-card">
+            <div class="product-card__img">
+              <img src="{{ url_for('static', filename='images/Polyethylene (PE) Films for Milk Packaging.jpg') }}"
+                alt="Polyethylene (PE) Films for Milk Packaging" class="product-card__photo">
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__title">Polyethylene (PE) Films for Milk Packaging</p>
+              <p class="product-card__desc">Manufactured using premium-grade LDPE resin, our PE films for milk packaging
+                offer excellent tensile strength, leak resistance, and clarity — ensuring dairy products reach consumers
+                in perfect condition. Suitable for both pouched and bulk milk packaging formats.</p>
+              <ul class="product-card__features">
+                <li>High seal strength</li>
+                <li>Food-grade material</li>
+                <li>Leak-proof construction</li>
+                <li>50–200 microns</li>
+                <li>Printable surface</li>
+                <li>Excellent clarity &amp; gloss</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Product 1.2 -->
+          <div class="product-card">
+            <div class="product-card__img">
+              <img src="{{ url_for('static', filename='images/Polyethylene Films for Edible Oil Packaging.png') }}"
+                alt="Polyethylene Films for Edible Oil Packaging" class="product-card__photo">
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__title">Polyethylene Films for Edible Oil Packaging</p>
+              <p class="product-card__desc">Specifically formulated for edible oil applications, these films provide a
+                superior moisture and oxygen barrier, preventing contamination and preserving quality during storage and
+                transportation. Conforms to food safety regulations.</p>
+              <ul class="product-card__features">
+                <li>High barrier properties</li>
+                <li>Puncture resistant</li>
+                <li>Grease &amp; oil resistant</li>
+                <li>Custom widths &amp; thicknesses</li>
+                <li>Automated packaging compatible</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Product 1.3 -->
+          <div class="product-card">
+            <div class="product-card__img">
+              <img src="{{ url_for('static', filename='images/shrink Films.jpg') }}" alt="Shrink Films" class="product-card__photo">
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__title">Shrink Films</p>
+              <p class="product-card__desc">Designed for tamper-evident and multi-pack bundling applications. When heat
+                is applied, the film conforms tightly to the product shape, offering a clean, professional appearance
+                with strong holding force. Widely used in beverage, dairy, and FMCG industries.</p>
+              <ul class="product-card__features">
+                <li>Shrink ratio up to 75%</li>
+                <li>Crystal-clear transparency</li>
+                <li>Strong sealing edges</li>
+                <li>Resistant to tearing</li>
+                <li>Center-fold &amp; single-wound rolls</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Product 1.4 -->
+          <div class="product-card">
+            <div class="product-card__img"><img src="{{ url_for('static', filename='images/Laminated Films.png') }}" alt="Laminated Films"
+                class="product-card__photo">
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__title">Laminated Films</p>
+              <p class="product-card__desc">Our laminated films combine multiple substrate layers to deliver enhanced
+                mechanical strength, barrier protection, and printability. Ideal for packaging applications that require
+                both protection and visual branding, particularly in food and consumer goods sectors.</p>
+              <ul class="product-card__features">
+                <li>PE/BOPP/Nylon combinations</li>
+                <li>Moisture &amp; oxygen barrier</li>
+                <li>Excellent print adhesion</li>
+                <li>High-clarity finish</li>
+                <li>Custom roll sizes</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ==========================================
+           TAB 2: Muthu Shri Chakra Packaging
+           ========================================== -->
+      <div class="tab-panel" id="tab-mscp" role="tabpanel">
+        <div class="fade-in" style="margin-bottom: 36px;">
+          <h2 style="margin-bottom: 12px;">Muthu Shri Chakra Packaging — Product Range</h2>
+          <p style="max-width: 800px; color: #555;">Muthu Shri Chakra Packaging Private Limited is a trusted
+            manufacturer of flexible packaging solutions. Our production capabilities span laminated films, heavy-duty
+            tarpaulins, and printed poly films, all manufactured to meet the specific requirements of our clients in the
+            dairy, oil, and industrial sectors.</p>
+        </div>
+
+        <div class="grid-2 fade-in" style="grid-template-columns: 1fr 1fr; align-items: start; gap: 28px;">
+
+          <!-- Product 2.1 -->
+          <div class="product-card">
+            <div class="product-card__img"><img src="{{ url_for('static', filename='images/Laminated Films.png') }}" alt="Laminated Films"
+                class="product-card__photo">
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__title">Laminated Films</p>
+              <p class="product-card__desc">Multi-layer laminated films that offer exceptional strength, barrier
+                properties, and a superior finish. Widely used for packaging milk, oil, snacks, and other food products.
+                Our lamination process ensures excellent bond strength and uniformity across every roll.</p>
+              <ul class="product-card__features">
+                <li>PE/BOPP/Foil combinations</li>
+                <li>High bond strength</li>
+                <li>Moisture &amp; grease barrier</li>
+                <li>High-speed machine compatible</li>
+                <li>Custom widths &amp; print-ready</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Product 2.2 -->
+          <div class="product-card">
+            <div class="product-card__img"><img src="{{ url_for('static', filename='images/Tarpaulins.png') }}" alt="Tarpaulins"
+                class="product-card__photo">
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__title">Tarpaulins</p>
+              <p class="product-card__desc">Heavy-duty, woven polyethylene-based covers designed for outdoor protection,
+                agriculture, construction, and industrial storage. Manufactured for maximum durability and weather
+                resistance — available in a range of sizes, thicknesses, and colors as per client requirements.</p>
+              <ul class="product-card__features">
+                <li>UV stabilized</li>
+                <li>Waterproof &amp; tear-resistant</li>
+                <li>Reinforced edges &amp; eyelets</li>
+                <li>Multiple GSM options</li>
+                <li>Customizable size &amp; color</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Product 2.3 -->
+          <div class="product-card">
+            <div class="product-card__img">><img src="{{ url_for('static', filename='images/Printed Poly Films for Milk Packaging.png') }}"
+                alt="Printed Poly Films for Milk Packaging" class="product-card__photo">
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__title">Printed Poly Films for Milk Packaging</p>
+              <p class="product-card__desc">High-resolution flexographic printing on food-grade polyethylene film. These
+                films allow dairy brands to present products with vibrant, smudge-resistant branding while maintaining
+                packaging integrity and hygiene.</p>
+              <ul class="product-card__features">
+                <li>Up to 8-color flexo printing</li>
+                <li>Food-grade ink</li>
+                <li>High registration accuracy</li>
+                <li>VFFS machine compatible</li>
+                <li>Pre-made roll format</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Product 2.4 -->
+          <div class="product-card">
+            <div class="product-card__img">><img src="{{ url_for('static', filename='images/Printed Poly Films for Oil Packaging.png') }}"
+                alt="Printed Poly Films for Oil Packaging" class="product-card__photo">
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__title">Printed Poly Films for Oil Packaging</p>
+              <p class="product-card__desc">Designed for edible oil brands requiring functional and attractive packaging
+                — combining barrier performance with excellent print quality. Produced under hygienic conditions,
+                conforming to food safety standards.</p>
+              <ul class="product-card__features">
+                <li>Grease &amp; oil barrier</li>
+                <li>High-definition printing</li>
+                <li>Strong seal integrity</li>
+                <li>Roll format for automated lines</li>
+                <li>Various thickness grades</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ==========================================
+           TAB 3: Muthu Multi Formation
+           ========================================== -->
+      <div class="tab-panel" id="tab-mmf" role="tabpanel">
+        <div class="fade-in" style="margin-bottom: 36px;">
+          <h2 style="margin-bottom: 12px;">Muthu Multi Formation — Product Range</h2>
+          <p style="max-width: 800px; color: #555;">Muthu Multi Formation is a specialist manufacturer of PVC-based
+            flexible tubes and hoses for industrial applications. Our products are built to withstand demanding
+            conditions, offering flexibility, durability, and consistent performance in a variety of industrial
+            environments.</p>
+        </div>
+
+        <div class="grid-2 fade-in" style="grid-template-columns: 1fr 1fr; align-items: start; gap: 28px;">
+
+          <!-- Product 3.1 -->
+          <div class="product-card">
+            <div class="product-card__img"><img src="{{ url_for('static', filename='images/PVC Flexible Tubes.jpg') }}" alt="PVC Flexible Tubes"
+                class="product-card__photo">
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__title">PVC Flexible Tubes</p>
+              <p class="product-card__desc">Manufactured from high-quality, virgin-grade PVC compound, offering
+                excellent flexibility across a wide temperature range. Used in agricultural irrigation, water supply
+                systems, laboratory setups, and general industrial fluid transfer applications.</p>
+              <ul class="product-card__features">
+                <li>Non-toxic &amp; food-safe options</li>
+                <li>-5°C to +60°C range</li>
+                <li>Clear and opaque variants</li>
+                <li>1/4" to 4" inner diameter</li>
+                <li>UV-resistant options</li>
+                <li>High burst pressure rating</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Product 3.2 -->
+          <div class="product-card">
+            <div class="product-card__img"><img src="{{ url_for('static', filename='images/PVC Braided Hose.jpg') }}" alt="PVC Braided Hose"
+                class="product-card__photo">
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__title">PVC Braided Hose</p>
+              <p class="product-card__desc">Reinforced with high-strength polyester braid for medium to high-pressure
+                fluid and air applications. The braided reinforcement prevents kinking and enhances pressure-handling
+                capacity — ideal for compressed air lines, hydraulic systems, and water delivery.</p>
+              <ul class="product-card__features">
+                <li>High-tensile polyester braid</li>
+                <li>Excellent kink resistance</li>
+                <li>Up to 20 bar operating pressure</li>
+                <li>Smooth bore for unrestricted flow</li>
+                <li>Transparent &amp; colored variants</li>
+                <li>Sizes: 1/4" to 2"</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Product 3.3 -->
+          <div class="product-card" style="grid-column: 1 / -1; max-width: 600px;">
+            <div class="product-card__img"><img src="{{ url_for('static', filename='images/LD Flat Hose (Low-Density Polyethylene Flat Hose).png') }}"
+                alt="LD Flat Hose (Low-Density Polyethylene Flat Hose)" class="product-card__photo">
+            </div>
+            <div class="product-card__body">
+              <p class="product-card__title">LD Flat Hose (Low-Density Polyethylene Flat Hose)</p>
+              <p class="product-card__desc">Manufactured from low-density polyethylene, designed for agricultural and
+                irrigation applications. Flattens compactly for easy storage — when water flows through, it inflates to
+                full round cross-section for efficient delivery.</p>
+              <ul class="product-card__features">
+                <li>Lightweight &amp; compact when flat</li>
+                <li>Easy to roll &amp; store</li>
+                <li>Drip &amp; sprinkler irrigation</li>
+                <li>Chemical &amp; fertilizer resistant</li>
+                <li>Various bore sizes &amp; lengths</li>
+                <li>High-flow capacity</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section fade-in">
+    <div class="container">
+      <h2>Need a Custom Solution?</h2>
+      <p>Contact us to discuss your specific packaging or tubing requirements with our expert team.</p>
+      <a href="{{ url_for('contact') }}" class="btn btn--navy">Get In Touch</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">Muthu Groups</div>
+          <p class="footer__tagline">Manufacturing quality.<br />Delivering trust.</p>
+        </div>
+        <div>
+          <p class="footer__heading">Quick Links</p>
+          <div class="footer__links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About Us</a>
+            <a href="{{ url_for('products') }}">Products</a>
+            <a href="{{ url_for('companies') }}">Group Companies</a>
+            <a href="{{ url_for('contact') }}">Contact Us</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__heading">Contact</p>
+          <div class="footer__contact">
+            <p><span class="icon">📍</span>No:71/1, poraiyoor, Villianur commune,Puducherry - 605110, India</p>
+            <p><span class="icon">📞</span>6380633625, 7598580361</p>
+            <p><span class="icon">📧</span>info@muthugroups.com</p>
+            <p><span class="icon">🕘</span>Mon – Sat, 9:00 AM – 6:00 PM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">&copy; 2026 Muthu Groups. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Discover the three companies under Muthu Groups — Muthu Food Films, Muthu Shri Chakra Packaging, and Muthu Multi Formation." />
+  <title>Group Companies | Muthu Groups</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <style>
+    /* Company 2 banner has a slightly different hue for distinction */
+    .company-section--c2 .company-section__banner {
+      background: linear-gradient(135deg, #0d3030 0%, #134040 100%);
+    }
+
+    /* Company 3 banner: steel-blue accent */
+    .company-section--c3 .company-section__banner {
+      background: linear-gradient(135deg, #0B2545 0%, #1a3a5c 50%, #1d4a7a 100%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="{{ url_for('home') }}" class="navbar__logo">Muthu Groups<span></span></a>
+      <ul class="navbar__links">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About Us</a></li>
+        <li><a href="{{ url_for('products') }}">Products</a></li>
+        <li><a href="{{ url_for('companies') }}" class="active">Group Companies</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Toggle menu" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('about') }}">About Us</a>
+    <a href="{{ url_for('products') }}">Products</a>
+    <a href="{{ url_for('companies') }}" class="active">Group Companies</a>
+    <a href="{{ url_for('contact') }}">Contact Us</a>
+  </div>
+
+  <!-- PAGE BANNER -->
+  <div class="page-banner">
+    <div class="container">
+      <h1>Group Companies</h1>
+      <p class="breadcrumb" style="margin-top: 14px;"><a href="{{ url_for('home') }}">Home</a><span>&rsaquo;</span>Group Companies</p>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <section class="section section--grey" style="padding-bottom: 40px;">
+    <div class="container text-center fade-in">
+      <p
+        style="color: var(--amber); font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;">
+        The Muthu Groups Family</p>
+      <h2 class="section-title">Three Companies. One Standard of Excellence.</h2>
+      <p style="max-width: 680px; margin: 0 auto; color: #555;">Each company under Muthu Groups operates as a specialist
+        in its domain, but all share the same founding commitment to quality, consistency, and customer satisfaction.
+      </p>
+    </div>
+  </section>
+
+  <!-- COMPANY SECTIONS -->
+  <section class="section section--grey">
+    <div class="container">
+
+      <!-- ==========================================
+           Company 1: Muthu Food Films
+           ========================================== -->
+      <div class="company-section fade-in" id="mff">
+        <div class="company-section__banner">
+          <span class="tag">Packaging Films</span>
+          <h2>Muthu Food Films</h2>
+          <p class="tagline">"Packaging the Future of Food."</p>
+        </div>
+        <div class="company-section__body">
+          <div class="grid-2" style="gap: 40px;">
+            <div>
+              <h3 style="color: var(--navy); margin-bottom: 14px;">About the Company</h3>
+              <p>Muthu Food Films is the flagship manufacturing company of the Muthu Groups, specializing in
+                high-performance polyethylene and laminated films for the food and dairy industry. With state-of-the-art
+                extrusion and lamination equipment, we produce films that meet the stringent quality demands of dairy
+                cooperatives, oil producers, and food processors.</p>
+              <p style="margin-top: 12px;">Our production facility is equipped with modern quality control systems to
+                ensure every roll that leaves our plant is consistent, reliable, and fit for purpose.</p>
+              <div style="margin-top: 24px;">
+                <p
+                  style="font-weight: 700; font-size: 0.85rem; color: var(--navy); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px;">
+                  Key Products</p>
+                <div class="company-section__products">
+                  <span>PE Films for Milk</span>
+                  <span>PE Films for Edible Oil</span>
+                  <span>Shrink Films</span>
+                  <span>Laminated Films</span>
+                </div>
+              </div>
+              <a href="{{ url_for('products') }}" class="btn btn--amber" style="margin-top: 8px;">View Products &rarr;</a>
+            </div>
+            <div>
+              <div class="img-placeholder" style="min-height: 300px;">🎞️ Muthu Food Films Facility</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           Company 2: Muthu Shri Chakra Packaging
+           ========================================== -->
+      <div class="company-section company-section--c2 fade-in" id="mscp">
+        <div class="company-section__banner">
+          <span class="tag">Flexible Packaging</span>
+          <h2>Muthu Shri Chakra Packaging Pvt. Ltd.</h2>
+          <p class="tagline">"Wrapping Quality Into Every Layer."</p>
+        </div>
+        <div class="company-section__body">
+          <div class="grid-2" style="gap: 40px;">
+            <div>
+              <div class="img-placeholder" style="min-height: 300px;">📦 Muthu Shri Chakra Facility</div>
+            </div>
+            <div>
+              <h3 style="color: var(--navy); margin-bottom: 14px;">About the Company</h3>
+              <p>Muthu Shri Chakra Packaging Private Limited is a dedicated manufacturer of flexible packaging products,
+                serving clients who demand both functional performance and branding excellence. Our production
+                capabilities include multi-layer lamination, tarpaulin weaving, and multi-color printing.</p>
+              <p style="margin-top: 12px;">We take pride in delivering products that are consistent, vibrant, and built
+                for demanding environments — catering to the complete packaging needs of dairy brands, oil companies,
+                and industrial clients.</p>
+              <div style="margin-top: 24px;">
+                <p
+                  style="font-weight: 700; font-size: 0.85rem; color: var(--navy); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px;">
+                  Key Products</p>
+                <div class="company-section__products">
+                  <span>Laminated Films</span>
+                  <span>Tarpaulins</span>
+                  <span>Printed Poly Films (Milk)</span>
+                  <span>Printed Poly Films (Oil)</span>
+                </div>
+              </div>
+              <a href="{{ url_for('products') }}" class="btn btn--amber" style="margin-top: 8px;">View Products &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           Company 3: Muthu Multi Formation
+           ========================================== -->
+      <div class="company-section company-section--c3 fade-in" id="mmf">
+        <div class="company-section__banner">
+          <span class="tag">Industrial Tubing</span>
+          <h2>Muthu Multi Formation</h2>
+          <p class="tagline">"Industrial Strength. Built to Flow."</p>
+        </div>
+        <div class="company-section__body">
+          <div class="grid-2" style="gap: 40px;">
+            <div>
+              <h3 style="color: var(--navy); margin-bottom: 14px;">About the Company</h3>
+              <p>Muthu Multi Formation is the industrial arm of Muthu Groups, focused on the manufacture of PVC flexible
+                tubes and hoses for agricultural, hydraulic, and general industrial applications. Our products are
+                engineered for long service life and reliable performance under challenging conditions.</p>
+              <p style="margin-top: 12px;">We serve a wide range of clients across agriculture, manufacturing, and
+                infrastructure sectors, providing consistent tubing solutions backed by thorough quality inspection at
+                every production stage.</p>
+              <div style="margin-top: 24px;">
+                <p
+                  style="font-weight: 700; font-size: 0.85rem; color: var(--navy); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px;">
+                  Key Products</p>
+                <div class="company-section__products">
+                  <span>PVC Flexible Tubes</span>
+                  <span>PVC Braided Hose</span>
+                  <span>LD Flat Hose</span>
+                </div>
+              </div>
+              <a href="{{ url_for('products') }}" class="btn btn--amber" style="margin-top: 8px;">View Products &rarr;</a>
+            </div>
+            <div>
+              <div class="img-placeholder" style="min-height: 300px;">🔧 Muthu Multi Formation Facility</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section fade-in">
+    <div class="container">
+      <h2>Ready to Partner With Us?</h2>
+      <p>Reach out to our team to discuss how our group companies can serve your business needs.</p>
+      <a href="{{ url_for('contact') }}" class="btn btn--navy">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">Muthu Groups</div>
+          <p class="footer__tagline">Manufacturing quality.<br />Delivering trust.</p>
+        </div>
+        <div>
+          <p class="footer__heading">Quick Links</p>
+          <div class="footer__links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About Us</a>
+            <a href="{{ url_for('products') }}">Products</a>
+            <a href="{{ url_for('companies') }}">Group Companies</a>
+            <a href="{{ url_for('contact') }}">Contact Us</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__heading">Contact</p>
+          <div class="footer__contact">
+            <p><span class="icon">📍</span>No:71/1, poraiyoor, Villianur commune,Puducherry - 605110, India</p>
+            <p><span class="icon">📞</span>6380633625, 7598580361</p>
+            <p><span class="icon">📧</span>info@muthugroups.com</p>
+            <p><span class="icon">🕘</span>Mon – Sat, 9:00 AM – 6:00 PM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">&copy; 2026 Muthu Groups. All Rights Reserved.</div>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>
